@@ -1,0 +1,86 @@
+/*--------POPUP CSS-------------*/
+.overlay{
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top : 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 100;
+}
+.overlay.active{
+    visibility: visible;
+}
+.popup {
+    background: #462B51;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    font-family: 'Russo One', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    border-radius: 2rem;
+    transform: scale(0.7);
+    z-index: 100;
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+
+}
+.popup .btn-cerrar-popup:hover{
+    color:red;
+}
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 20px;
+	line-height: 18px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+.popup form .btn-insertar {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #DC7236;
+	border-radius: 3px;
+	font-family: 'Russo One', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.popup form .btn-insertar:hover {
+	background: rgba(17, 85, 141, 0.9);
+}
+
+.popup.active{
+    opacity: 1; 
+    transform: scale(0.7);
+    z-index: 100;
+}
+
+.imagenPopup{
+    width: 100%;
+}
+
+.ImgUser{
+    width: 20%;
+    display: block;
+    margin:auto;
+}
+
+#inputname{
+    color: white;
+}

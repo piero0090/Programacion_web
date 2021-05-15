@@ -1,0 +1,91 @@
+/*------------------------SIDEBAR CSS----------------------*/
+:root{
+    --primary:radial-gradient(circle at 50% -3.03%, #62aeff 0, #2c4f7e 50%, #000000 100%);;
+    --light:#ffffff;
+    --light-blue:#F5F6FA;
+    --grey:#eff2f7;
+}
+
+.bg-light{
+    background-image: radial-gradient(circle at 19.4% 71.42%, #5b4ca3 0, #0f2684 50%, #000566 100%);
+}
+
+#closeButton{
+    background-image: radial-gradient(circle at 19.4% 71.42%, #5b4ca3 0, #0f2684 50%, #000566 100%) !important;
+    border: none;
+}
+
+#logoUlima02{
+    padding-left: 7rem;
+    
+}
+
+.botones{
+    font-family: 'Russo One', sans-serif;
+}
+
+.barra_player{
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#sidebar-container{
+    min-height: 100vh;
+    margin-left: -18rem;
+    transition: margin .25s ease-in-out;
+}
+
+#sidebar-container .logo{
+    padding: .875rem 1.25rem;
+    font-size: 1.2rem;
+    text-shadow: 10px 6px 2px #E8323A;
+    font-family: 'Reggae One', cursive;
+    color: white;
+}
+
+#sidebar-container .menu{
+   width: 18rem; 
+}
+
+#content-wrapper.toggled #sidebar-container{
+    margin-left: 0;
+}
+
+@media(max-width:760px){
+    #sidebar-container{
+        margin-left: 0;
+       
+    }
+    #page-container{
+        min-width: 0;
+        width: 100%;
+    }
+    #content-wrapper.toggled #sidebar-container{
+        margin-left: -18rem;
+    }
+    #sidebar-container .logo{
+        color:violet;
+        font-size: 100px;
+    }
+    .barra_player{
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:760px) and (orientation: landscape){
+    #sidebar-container{
+        margin-left: 0;
+        height: 360px;
+        width: 640px;
+    }
+    #page-container{
+        min-width: 0;
+        width: 100%;
+    }
+    #content-wrapper.toggled #sidebar-container{
+        margin-left: -20rem;
+    }
+
+}
