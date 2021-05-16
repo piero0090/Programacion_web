@@ -52,7 +52,6 @@ function Cambiarnombre(){
     gacum.push(ganancia_acumulada);
     localStorage.setItem("Gacum",gacum);
     console.log("GANANCIA: "+ganancia_acumulada);
-    // console.log(napuestas );
  }
 
  //Cerrar PopUp
@@ -67,18 +66,9 @@ function AceptarNombre(){
     const ganancy=document.querySelector('#ganancia');
     overlay.classList.remove('active');
     popup.classList.remove('active');
-    // Grabar();
     money.innerHTML=200;
     ganancy.innerHTML=0;
 }
-
-// var getData = function(){
-//     var name = document.getElementById("name").value;
-//     console.log(name);
-//     document.getElementById("name_jugador").innerHTML=name; 
-//     return name;
-//     // localStorage.setItem("Nombre",nam);    //LOCALSTORAGE
-// }
 
 function getData(){
     var name=document.getElementById("name").value;
@@ -106,7 +96,7 @@ const main=()=>{
     boton.addEventListener('click',SoundBoton);
     btnCerrarPopup.addEventListener('click',CerrarPopUp);
     btnCambiarNombre.addEventListener('click',Cambiarnombre);
-    btnCambiarNombre.addEventListener('click',Grabar);
+    btnCambiarNombre.addEventListener('click',llenarTabla);
     btnAceptarnombre.addEventListener('click',AceptarNombre);
     btnAceptarnombre.addEventListener('click',getData);
 

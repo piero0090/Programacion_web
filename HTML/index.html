@@ -45,6 +45,7 @@
       </div>
     </div>
   </div>
+
   <!--AUDIOS-->
   <div id="audio-fondo"></div>
   <div id="audio-cartas"></div>
@@ -53,16 +54,15 @@
   <div id="audio-cobrar"></div>
   <div id="content-wrapper" class="d-flex">
     <!--SideBar-->
+    
     <div id="sidebar-container" class="border-right bg-light">
-      <div class="logo">
-        <div class="row ">
-          <div id="Traga" class="col-10">
+      <div class="logo mb-4">
+          <div id="Traga" class="">
             <h4 id="logoUlima01">Tragamonedas</h4>
           </div>
-          <div id="bexit" class="col-2">
-            <button class="btn" id="closeButton"><span id="closeButton02" class="fas fa-window-close text-light"></span></button>
+          <div id="bexit" class="">
+            <button class="btn text-light" id="closeButton">X</button>
           </div>
-        </div>
       </div>
       <div class="logo">
         <h4 id="logoUlima02">ULIMA</h4>
@@ -76,19 +76,19 @@
           <h4 class="barra_player" id="name_jugador"></h4>
         </div>
         <div class="pt-3 divMonedas">
-          <h4 class="barra_player"><span class="fas fa-coins me-2"></span>Monedas</h4>
+          <h4 id="monedass" class="barra_player"><span class="fas fa-coins me-2"></span>Monedas</h4>
         </div>
         <div>
           <h4 class="barra_player" id="monedas">200</h4>
         </div>
         <div class="pt-3 divGanancia">
-          <h4 class="barra_player"><span class="fas fa-dollar-sign me-2"></span>Ganancia acumulada</h4>
+          <h4 id="acumulado" class="barra_player"><span class="fas fa-dollar-sign me-2"></span>Ganancia acumulada</h4>
         </div>
         <div>
           <h4 class="barra_player" id="ganancia">0</h4>
         </div>
         <!-- (Acerca de) button -->
-        <button type="button" class="btn text-light d-block p-3 w-100 botones" data-bs-toggle="modal"
+        <button id="btnAcerca" type="button" class="btn text-light d-block p-3 w-100 botones" data-bs-toggle="modal"
           data-bs-target="#aboutbutton"><span class="fas fa-info me-2"></span> Acerca de</button>
         <div class="modal fade" id="aboutbutton" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
@@ -138,7 +138,7 @@
         </div>
 
         <!-- (Instrucciones) button -->
-        <button type="button" class="btn text-light d-block p-3 w-100 botones" data-bs-toggle="modal"
+        <button id="btnInstr" type="button" class="btn text-light d-block p-3 w-100 botones" data-bs-toggle="modal"
           data-bs-target="#instruccbutton"><span class="fas fa-book me-2"></span> Instrucciones</button>
         <div class="modal fade" id="instruccbutton" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
@@ -189,7 +189,7 @@
         </div>
 
         <!-- (Rankings) button -->
-        <button type="button" class="btn text-light d-block p-3 w-100 botones" data-bs-toggle="modal"
+        <button id="btnRanking" type="button" class="btn text-light d-block p-3 w-100 botones" data-bs-toggle="modal"
           data-bs-target="#Rankingbutton"><span class="fas fa-trophy me-2"></span> Rankings</button>
         <div class="modal fade" id="Rankingbutton" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
@@ -231,6 +231,7 @@
         </div>
       </div>
     </div>
+  
 
     <!--Contenedor-->
     <div id="page-container" class=" w-100 border-bottom ">
@@ -241,38 +242,41 @@
             <button id="menu-toggle" class="btn btn-primary w-100 h-100 ms-5 botones"><span class="fas fa-bars"></span></button>
           </div>
           <div class="col-10">
-            <h4 class="barra_player my-1"><span class="fas fa-hand-holding-usd me-3"></span>Numero de apuestas <span id="num_apuesta">0</span></h4>
+            <h4 id="barranumapuestas" class="barra_player my-1"><span class="fas fa-hand-holding-usd me-3"></span>Numero de apuestas <span id="num_apuesta">0</span></h4>
           </div>
         </div>
 
         <!--Maquinas-->
-        <div class="row mt-5">
+        <div id="maquinass" class="row mt-5">
           <!--MaquinaA-->
           <div class="col-6">
             <div class="row">
               <div class="col-2"></div>
-              <div class="col-8">
+              <div id="ZonaA" class="col-8">
                 <h1 class="nom-maquina">Maquina 1</h1>
-                <div class="row mt-4">
-                  <div class="col-1"></div>         <!--CHANGESSSS: COL-2-->
-                  <div class="col-10">
+                <div class="row mt-4 ">
+                  <div class="col-1"></div>         
+                  <div id="Maq01" class="col-10">
                     <img id="maquina-1" src="/imagenes/maquina.png" alt="" srcset="">
                   </div>
                   <div class="col-1"></div>
                 </div>
 
-                <div class="row mt-4">
-                  <div id="but-min-m1" class="col-3">
+                <div class="container">
+                <div id="Botonesmaq1" class="row mt-4">
+                  <div id="but-min-m1" class="col-md-3">
                     <button id="min-m1" class="btn btn-danger" disabled><span class="fas fa-arrow-down"></span></button>
                   </div>
-                  <div id="txt-m1" class="col-6">
+                  <div id="txt-m1" class="col-md-6 ">
                     <span id="apuesta-1">0</span>
                   </div>
-                  <div id="but-max-m1" class="col-3">
+                  <div id="but-max-m1" class="col-md-3">
                     <button id="max-m1" class="btn btn-danger"><span class="fas fa-arrow-up"></span></button>
                   </div>
                 </div>
+              </div>
                 <button id="jugar" class="btn btn-danger mt-2" disabled>Jugar</button>
+                <div id="MensajeA" class="alert alert-success mt-2">GANASTEE!!!</div>
               </div>
               <div class="col-2"></div>
             </div>
@@ -285,24 +289,26 @@
                 <h1 class="nom-maquina">Maquina 2</h1>
                 <div class="row mt-4">
                   <div class="col-1"></div>
-                  <div class="col-10">
+                  <div id="Maq02" class="col-10">
                     <img id="maquina-2" src="/imagenes/maquina2/maquina2.jpg" alt="" srcset="">
                   </div>
                   <div class="col-1"></div>
                 </div>
-                <div class="row mt-4">
-                  <div id="but-min-m2" class="col-3">
-                    <button id="min-m2" class="btn btn-success" disabled><span
-                        class="fas fa-arrow-down"></span></button>
+                <div class="container">
+                <div id="Botonesmaq2" class="row mt-4">
+                  <div id="but-min-m2" class="col-md-3">
+                    <button id="min-m2" class="btn btn-success" disabled><span class="fas fa-arrow-down"></span></button>
                   </div>
-                  <div id="txt-m2" class="col-6">
+                  <div id="txt-m2" class="col-md-6">
                     <span id="apuesta-2">0</span>
                   </div>
-                  <div id="but-max-m2" class="col-3">
+                  <div id="but-max-m2" class="col-md-3">
                     <button id="max-m2" class="btn btn-success"><span class="fas fa-arrow-up"></span></button>
                   </div>
                 </div>
+              </div>
                 <button id="jugar-2" class="btn btn-success mt-2" disabled>Jugar</button>
+                <div id="MensajeB" class="alert alert-success mt-2">GANASTEE!!!</div>
               </div>
               <div class="col-2"></div>
             </div>

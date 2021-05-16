@@ -6,6 +6,15 @@
     --grey:#eff2f7;
 }
 
+.alert{
+    visibility: hidden;
+    color: rgb(158, 255, 13);
+    background-color: black;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+
 .bg-light{
     background-image: radial-gradient(circle at 19.4% 71.42%, #5b4ca3 0, #0f2684 50%, #000566 100%);
 }
@@ -32,7 +41,7 @@
 
 #sidebar-container{
     min-height: 100vh;
-    margin-left: -18rem;
+    margin-left: -20rem;
     transition: margin .25s ease-in-out;
 }
 
@@ -45,40 +54,16 @@
 }
 
 #sidebar-container .menu{
-   width: 18rem; 
+   width: 20rem; 
 }
 
 #content-wrapper.toggled #sidebar-container{
     margin-left: 0;
 }
 
-@media(max-width:760px){
+@media(max-width:768px) and (orientation:portrait){
     #sidebar-container{
-        margin-left: 0;
-       
-    }
-    #page-container{
-        min-width: 0;
-        width: 100%;
-    }
-    #content-wrapper.toggled #sidebar-container{
-        margin-left: -18rem;
-    }
-    #sidebar-container .logo{
-        color:violet;
-        font-size: 100px;
-    }
-    .barra_player{
-        font-size: 15px;
-    }
-
-}
-
-@media(max-width:760px) and (orientation: landscape){
-    #sidebar-container{
-        margin-left: 0;
-        height: 360px;
-        width: 640px;
+        margin-left: 0;       
     }
     #page-container{
         min-width: 0;
@@ -87,5 +72,96 @@
     #content-wrapper.toggled #sidebar-container{
         margin-left: -20rem;
     }
+    #sidebar-container .logo{
+        font-size: 100px;
+    }
+    .barra_player{
+        font-size: 15px;
+    }
+    #sidebar-container .menu{
+        width: 20rem; 
+    }
 
 }
+
+@media(max-width:768px) and (orientation: landscape){
+    #sidebar-container{
+        margin-left: 0;
+        /* height: 100px !important;
+        width: 100px !important; */
+    }
+    #page-container{
+        min-width: 0;
+        width: 100%;
+        
+    }
+    .nom-maquina{
+        font-size: 10px !important;
+    }
+    
+    #sidebar-container .menu{
+        width: 40rem !important; 
+    }
+    #maquina-2, #maquina-1{
+        width: 20px;
+        height: 80px;
+    }
+
+    #maquinass{
+        width: 100%;
+        height: 100%;
+        margin: 4px !important;
+    }
+ #barranumapuestas{
+     font-size: 10px !important;
+ }
+
+    #content-wrapper.toggled #sidebar-container{
+        margin-left: -40rem;
+    }
+    #logoUlima02, #logoUlima01, #bexit{
+        font-size: 12px;
+    }
+    #logoUlima01{
+        margin-left: 50px;
+    }
+    .logo{
+        height: 15px;
+    }
+    #sidebar-container .menu{
+        width: 38rem; 
+        height: 20px;
+    }
+    #btn-cambiar-nombre, #name_jugador, #monedass,#monedas,#acumulado,#ganancia{
+        font-size: 10px;
+    }
+    #btnAcerca,#Buttonout,#boton,#btnRanking,#btnInstr{
+        font-size: 10px;
+    }
+    #btnAcerca,#btnInstr,#btnRanking,#boton{
+        width: 100px !important; 
+        padding: 0px !important;
+        margin-top: 10px;
+    }
+    #btnAcerca,#btnRanking{
+        float: left;
+        margin-right: 30px;
+        /* width: 100px !important; */
+    }
+    #boton{
+        float: left;
+        margin-right: 10px;
+    }
+    #Buttonout{
+        width: 100px !important; 
+        padding: 0px !important;
+        float: left;
+        border: none;
+    }
+    #btnInstr{
+        float: left;
+        margin-right: 30px;
+    }
+
+}
+
