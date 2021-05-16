@@ -1,11 +1,4 @@
 /*------------------------SIDEBAR CSS----------------------*/
-:root{
-    --primary:radial-gradient(circle at 50% -3.03%, #62aeff 0, #2c4f7e 50%, #000000 100%);;
-    --light:#ffffff;
-    --light-blue:#F5F6FA;
-    --grey:#eff2f7;
-}
-
 .alert{
     visibility: hidden;
     color: rgb(158, 255, 13);
@@ -87,8 +80,6 @@
 @media(max-width:768px) and (orientation: landscape){
     #sidebar-container{
         margin-left: 0;
-        /* height: 100px !important;
-        width: 100px !important; */
     }
     #page-container{
         min-width: 0;
@@ -146,7 +137,6 @@
     #btnAcerca,#btnRanking{
         float: left;
         margin-right: 30px;
-        /* width: 100px !important; */
     }
     #boton{
         float: left;
