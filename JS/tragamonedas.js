@@ -172,10 +172,21 @@ const cambiarCobrarJugar = (maquina) => {
         if (btnCobrarJugar == "Jugar") {
             botonCobrarJugar.textContent = "Cobrar";
             cobrar_m1 = true;
+            let butmin=document.querySelector("#but-min-m1");
+            butmin.innerHTML="";
+            let butmax=document.querySelector("#but-max-m1");
+            butmax.innerHTML="";
         } else {
             botonCobrarJugar.textContent = "Jugar";
             document.getElementById("MensajeA").style.visibility="hidden";
             cobrar_m1 = false;
+            let butmin=document.querySelector("#but-min-m1");
+            butmin.innerHTML="<button id='min-m1' class='btn btn-danger' disabled><span class='fas fa-arrow-down'></span></button>";
+            let butmax=document.querySelector("#but-max-m1");
+            butmax.innerHTML="<button id='max-m1' class='btn btn-danger'><span class='fas fa-arrow-up'></span></button>";
+            butmin.addEventListener("click", disminuirApuestaM1);
+            butmax.addEventListener("click", aumentarApuestaM1);
+
         }
     } else {
         let btnCobrarJugar = document.querySelector("#jugar-2").textContent;
@@ -183,10 +194,20 @@ const cambiarCobrarJugar = (maquina) => {
         if (btnCobrarJugar == "Jugar") {
             botonCobrarJugar.textContent = "Cobrar";
             cobrar_m2 = true;
+            let butmin=document.querySelector("#but-min-m2");
+            butmin.innerHTML="";
+            let butmax=document.querySelector("#but-max-m2");
+            butmax.innerHTML="";
         } else {
             botonCobrarJugar.textContent = "Jugar";
             document.getElementById("MensajeB").style.visibility="hidden";
             cobrar_m2 = false;
+            let butmin=document.querySelector("#but-min-m2");
+            butmin.innerHTML="<button id='min-m2' class='btn btn-danger' disabled><span class='fas fa-arrow-down'></span></button>";
+            let butmax=document.querySelector("#but-max-m2");
+            butmax.innerHTML="<button id='max-m2' class='btn btn-danger'><span class='fas fa-arrow-up'></span></button>";
+            butmin.addEventListener("click", disminuirApuestaM2);
+            butmax.addEventListener("click", aumentarApuestaM2);
         }
     }
 }

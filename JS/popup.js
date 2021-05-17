@@ -49,8 +49,10 @@ function Cambiarnombre(){
     popup.classList.add('active');
     numapuestas.push(num_apuesta);
     localStorage.setItem("Numapuesta",numapuestas);//LOCAL
+    monedas=200;
     gacum.push(ganancia_acumulada);
     localStorage.setItem("Gacum",gacum);
+    ganancia_acumulada=0;
     console.log("GANANCIA: "+ganancia_acumulada);
  }
 
